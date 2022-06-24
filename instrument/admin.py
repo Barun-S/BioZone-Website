@@ -4,7 +4,9 @@ from instrument.models import Instrument
 from django.contrib import admin
 # Register your models here.
 
-class InstrumentAdmin(admin.ModelAdmin):
+from import_export.admin import ImportExportModelAdmin
+
+class InstrumentAdmin(ImportExportModelAdmin):
     prepopulated_fields = {'slug':('instrument_name',)}
     list_display = ('instrument_name', 'slug', 'category', 'institute',)    
 

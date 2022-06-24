@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'instrument',
     'wishlist',
     'orders',
+    'import_export',
 ]
 
 MIDDLEWARE = [
