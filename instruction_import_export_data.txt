@@ -1,0 +1,11 @@
+Instructions for importing new data to the database from sheets:
+1. Download the sheet into .csv format from the google sheets.
+2. All the field tags that are to be imported should be of the same name as in the models.
+3. Now, login into backend and go to models.
+4. First, import the data into the category model and then export that same data to get the 'id' for the category.
+5. Now, import that same data into the institutemodel and then export it to get the 'id' for the institute.
+6. Since, we have got all the id's of institute and category, now fill up those ids in the sheet under the institute_id and category_id field.
+7. Now, import that data to the instrument model and we can see those imported instrumenst into the model.
+8. since, institute and category models are cascade into the instrument model, we need to get those models id first. If we directly import data into the category model it will throwback error as those fields are empty.
+9. Also, while importing new data into the models, delete the previous data from the sheets as it will cause duplication of data or sometimes id and it will throwback error.
+10. Export the instruments into a csv file to get the id for future reference.
